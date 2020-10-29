@@ -1,34 +1,42 @@
-''' File to run the model once trained '''
+"""
+    File to run testing metrics once the model has trained.
+"""
+
 
 import glob
 import pathlib
 
 import torch
-import torch.nn as nn
+from torch import nn
 
 from hyperparameters import parameters as params
-from models import resnet18
+import models
 from dataset import get_dataloader
 from testing import test_report
 
+
 def main():
-    ''' Main function, flow of program '''
+    """
+        main Main function, flow of program.
+    """
 
     # Model
-    model = resnet18()
+    model = eval('models.' + params['model'] + '()')
 
     # Running architecture (GPU or CPU)
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+    print('Using GPU?: ', torch.cuda.is_available())
 
     # Image loader
-    test_loader = get_dataloader(params['test_file'], params['img_size'],\
-            params['batch_size'], params['data_mean'], params['data_std'])
+    test_loader = get_dataloader(data_file=params['test_file'], img_size=params['img_size'],\
+            batch_size=1, data_mean=params['data_mean'], data_std=params['data_std'],\
+            data_split='Testing')
 
     # Creates the criterion (loss function)
     criterion = nn.CrossEntropyLoss()
 
     # Weights Load Up
-    weights_file = glob.glob(params['weights_path']+'/*.pth')[0]
+    weights_file = glob.glob(params['weights_path']+'/'+params['save_name']+'*.pth')[0]
 
     checkpoint = torch.load(weights_file)
     model.load_state_dict(checkpoint['model_state_dict'])
@@ -42,8 +50,9 @@ def main():
     pathlib.Path(params['report_path']).mkdir(parents=True, exist_ok=True)
 
 
-    # Run test and creates a report
-    test_report(model, test_loader, criterion, device, params['report_path'])
+    # Run test metrics and creates a report
+    test_report(model=model, dataloader=test_loader, criterion=criterion,
+                device=device, params['report_path'], params['save_name'])
 
 
 
