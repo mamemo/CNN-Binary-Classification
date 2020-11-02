@@ -112,7 +112,7 @@ def read_dataset(dir_img):
 
         @param dir_img Path to the csv file
     """
-    
+
     images = pd.read_csv(dir_img)
     ids = images['ID_IMG'].tolist()
     labels = images['LABEL'].tolist()
@@ -158,7 +158,7 @@ def get_aug_dataloader(train_file, img_size, batch_size, data_mean, data_std):
 
 def get_dataloader(data_file, img_size, batch_size, data_mean, data_std, data_split = 'Validation'):
     """
-        get_aug_dataloader Creates and returns a dataloader with no data augmentation.
+        get_dataloader Creates and returns a dataloader with no data augmentation.
 
         @param data_file Path to the images csv.
         @param img_size Input size of the model.
