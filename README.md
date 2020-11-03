@@ -1,4 +1,4 @@
-# CNN-Template
+# CNN Binary Classification Template
 
 This project is meant to work as a template for a binary CNN classification problem. 
 You are encourage to use this code as a base for your project, modifying it when it's necessary.
@@ -9,7 +9,7 @@ Before you clone this repo first do the following:
 
 1. Fork this repo. This will create you a copy of this repo on your own account, allowing you to modify it as you please and commit those changes. Otherwise you won't be able to commit any changes unless it's a contribution, in that case, please submit a pull request.
 2. Once you forked the repo, go to your account and clone the repo as you would normally.
-3. ```cd PATH/CNN-Template/``` In a terminal go to the project folder.
+3. ```cd PATH/CNN-Binary-Classification/``` In a terminal go to the project folder.
 4. ```pip install -r requeriments.txt``` Install all requirements.
 5. Change the code and have fun!
 
