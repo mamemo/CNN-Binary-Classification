@@ -1,4 +1,7 @@
 """
+    Author: Mauro Mendez.
+    Date: 02/11/2020.
+
     Applies the testing cycle on a dataloader.
     It also gets testing metrics.
 """

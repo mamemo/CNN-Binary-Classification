@@ -1,4 +1,7 @@
 """
+    Author: Mauro Mendez.
+    Date: 02/11/2020.
+
     File to create a single split (training/validation/testing).
 
     The dataset is expected to be in a folder following the structure:

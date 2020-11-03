@@ -1,4 +1,7 @@
 """
+    Author: Mauro Mendez.
+    Date: 02/11/2020.
+
     Implementation of metrics and results accumulator.
 
     * Supported Metrics and Accumulators (on training)

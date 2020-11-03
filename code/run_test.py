@@ -1,4 +1,7 @@
 """
+    Author: Mauro Mendez.
+    Date: 02/11/2020.
+
     File to run testing metrics once the model has trained.
 """
 
@@ -51,9 +54,9 @@ def main():
 
 
     # Run test metrics and creates a report
-    test_report(model=model, dataloader=test_loader, criterion=criterion,
-                device=device, params['report_path'], params['save_name'])
-
+    test_report(model=model, dataloader=test_loader, criterion=criterion,\
+                device=device, report_path=params['report_path'],\
+                save_name=params['save_name'])
 
 
 if __name__ == "__main__":

@@ -1,4 +1,7 @@
 """
+    Author: Mauro Mendez.
+    Date: 02/11/2020.
+
     File to calculate the mean and standard deviation of a dataset.
 """
 
