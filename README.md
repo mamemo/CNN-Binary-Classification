@@ -7,7 +7,7 @@ You are encourage to use this code as a base for your project, modifying it when
 
 Before you clone this repo first do the following:
 
-1. Fork this repo. This will create you a copy of this repo on your own account, allowing you to modify it as you please and commit those changes. Otherwise you won't be able to commit any changes unless it's a contribution, in that case, please submit a pull request.
+1. Click on __Use this template__. This will create you a brand new repository using this one as a template, allowing you to modify it as you please and commit those changes. Otherwise you won't be able to commit any changes unless it's a contribution, in that case, please submit a pull request.
 2. Once you forked the repo, go to your account and clone the repo as you would normally.
 3. ```cd PATH/CNN-Binary-Classification/``` In a terminal go to the project folder.
 4. ```pip install -r requeriments.txt``` Install all requirements. (Note: Pytorch version might need to installed separately. For more installing info visit [__pytorch.org__](https://pytorch.org/))
