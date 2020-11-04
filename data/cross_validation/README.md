@@ -1,6 +1,6 @@
 # Cross Validation Folder
 
-In this folder you will find the files to apply cross validation over your dataset. Currently one time split (train/val/test) and K-fold validation are supported.
+In this folder you will find the files to apply cross validation over your dataset. Currently single time split (train/val/test) and K-fold validation are supported.
 
 ## Files
 * [__amount_data.py:__](./amount_data.py) This file allows you to count the images in your dataset splits.
